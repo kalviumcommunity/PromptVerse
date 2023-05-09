@@ -1,6 +1,7 @@
 import "./App.css";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import NavBar from "./Components/NavBar";
+import HeroSection from "./Components/HeroSection";
 
 const theme = extendTheme({
   fonts: {
@@ -14,6 +15,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <div className="App">
         <NavBar></NavBar>
+        <HeroSection></HeroSection>
       </div>
     </ChakraProvider>
   );
