@@ -36,7 +36,7 @@ Wiki Outline Link: [Rishi Ganesh](https://wiki.kalvium.community/s/0d75b67a-f5e1
 | --------------------------------------------------- | ------ | -------------- |
 | - Low-fid design for your application               |✔️|[Figma Link](https://www.figma.com/file/ubDFcFMyF1oQHYMi8SDfr7/PromptVerse-MVP-Low-Fid?node-id=0%3A1&t=8rEnAbCQA6JkRWhG-1)|
 | - High-fid design for your application              |✔️|[Figma Link](https://www.figma.com/file/pJuSvqsVbcjtYedazZ3Wwe/PromptVerse-MVP-High-Fid?node-id=0%3A1&t=juxvpX56JRkjZ05W-1)|
-| - ReactJS app initialization                        |❌| |
+| - ReactJS app initialization                        |✔️|[PR #1](https://github.com/kalviumcommunity/PromptVerse/pull/3) |
 | - Application components created                    |❌| |
 | - Application deployed                              |❌| |
 | - IDE Setup                                         |❌| |
