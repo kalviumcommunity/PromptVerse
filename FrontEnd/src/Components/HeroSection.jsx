@@ -1,5 +1,5 @@
 import { Text, Box, Flex, Button } from "@chakra-ui/react";
-import { AddCircleRounded, OpenInNewRounded } from "@mui/icons-material";
+import { MdAddCircle, MdOpenInNew } from "react-icons/md";
 import heroimage from "./assets/heroimage.svg";
 import { TypeAnimation } from "react-type-animation";
 
@@ -18,8 +18,8 @@ const HeroSection = () => {
       flexDirection={{ base: "column-reverse", md: "row" }}
     >
       {/* Left section */}
-      <Box maxWidth="50%" paddingBottom={{ base: "48px", md: 0 }}>
-        <Box paddingBottom="36px">
+      <Box maxWidth="90%" paddingBottom={{ base: "48px", md: 0 }}>
+        <Box paddingBottom="36px" height="110px">
           {/* Dynamic Text */}
           <Text
             fontSize={{ base: "30px", md: "46px" }}
@@ -39,8 +39,9 @@ const HeroSection = () => {
                 "ChatGPT Prompts",
                 1500,
               ]}
-              startDelay={1000}
-              speed={10}
+              cursor={true}
+              deletionSpeed={20}
+              speed={15}
               repeat={x}
             />
           </Text>
@@ -52,6 +53,7 @@ const HeroSection = () => {
           fontWeight="extrabold"
           paddingBottom="4px"
           color="#333333"
+          minHeight="50px"
         >
           Discover the Power of AI Prompts
         </Box>
@@ -94,7 +96,7 @@ const HeroSection = () => {
             <Text fontSize="14px" fontWeight="bold" pr="8px">
               Add Prompts
             </Text>
-            <AddCircleRounded />
+            <MdAddCircle size={24} />
           </Button>
 
           {/* Learn Prompting Button */}
@@ -110,7 +112,7 @@ const HeroSection = () => {
             <Text fontSize="14px" fontWeight="bold" pr="8px">
               Learn Prompting
             </Text>
-            <OpenInNewRounded />
+            <MdOpenInNew size={20} />
           </Button>
         </Flex>
       </Box>
