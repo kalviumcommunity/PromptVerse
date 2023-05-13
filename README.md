@@ -26,6 +26,21 @@ We value your feedback and contributions in making PromptVerse even better. Plea
 
 Thank you for joining us on this exciting adventure! Let's embark on a journey of meaningful AI conversations together!
 
+## Contribution Guidelines
+
+We welcome contributions from anyone who is interested in helping to improve this project. If you'd like to contribute, please follow these guidelines:
+
+1. Fork the repository to your own GitHub account.
+2. Clone the project to your local machine.
+3. Create a new branch with a descriptive name (git checkout -b my-new-feature).
+4. Make changes to the code and commit them to your branch.
+5. Push your changes to your fork (git push origin my-new-feature).
+6. Open a pull request in this repository and describe the changes you've made.
+
+## Reporting Issues
+
+If you encounter any issues while using this project, please create a new issue on our GitHub repository. Be sure to include a detailed description of the issue and steps to reproduce it.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Progress Tracking 
@@ -37,7 +52,7 @@ Wiki Outline Link: [Rishi Ganesh](https://wiki.kalvium.community/s/0d75b67a-f5e1
 | - Low-fid design for your application               |✔️|[Figma Link](https://www.figma.com/file/ubDFcFMyF1oQHYMi8SDfr7/PromptVerse-MVP-Low-Fid?node-id=0%3A1&t=8rEnAbCQA6JkRWhG-1)|
 | - High-fid design for your application              |✔️|[Figma Link](https://www.figma.com/file/pJuSvqsVbcjtYedazZ3Wwe/PromptVerse-MVP-High-Fid?node-id=0%3A1&t=juxvpX56JRkjZ05W-1)|
 | - ReactJS app initialization                        |✔️|[PR #1](https://github.com/kalviumcommunity/PromptVerse/pull/3) |
-| - Application components created                    |❌| |
+| - Application components created                    |✔️|[PR #2](https://github.com/kalviumcommunity/PromptVerse/pull/4) |
 | - Application deployed                              |❌| |
 | - IDE Setup                                         |❌| |
 | - NodeJs REPL                                       |❌| |
