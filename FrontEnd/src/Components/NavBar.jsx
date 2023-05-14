@@ -33,7 +33,7 @@ const NavBar = () => {
         <Button
           variant="link"
           color="#6C63FF"
-          fontSize={{ base: "12px", md: "16px" }}
+          fontSize={{ base: "14px", md: "17px" }}
           fontWeight="bold"
           pt="4px"
           ml={{ base: "16px", md: "48px" }}
@@ -44,10 +44,10 @@ const NavBar = () => {
         <Button
           variant="link"
           color="#6C63FF"
-          fontSize={{ base: "12px", md: "16px" }}
+          fontSize={{ base: "14px", md: "1px" }}
           fontWeight="bold"
           pt="4px"
-          ml={{ base: "10px", md: "30px" }}
+          ml={{ base: "10px", md: "36px" }}
           display={{ base: "none", md: "block" }}
         >
           About
