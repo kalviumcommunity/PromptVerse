@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 import {
   Box,
@@ -16,12 +15,18 @@ import logo from "./assets/logo1.svg";
 
 const Logo = () => {
   return (
-    <Flex mb="24px" mt="24px">
-      <img src={logo} alt="logo" />
-      <Text fontSize={{ base: "20px", md: "34px" }} fontWeight="Bold" ml="12px">
-        PromptVerse
-      </Text>
-    </Flex>
+    <a href="#">
+      <Flex mb="24px" mt="24px">
+        <img src={logo} alt="logo" />
+        <Text
+          fontSize={{ base: "20px", md: "34px" }}
+          fontWeight="Bold"
+          ml="12px"
+        >
+          PromptVerse
+        </Text>
+      </Flex>
+    </a>
   );
 };
 
@@ -62,7 +67,7 @@ const Footer = () => {
         mb="24px"
       >
         <Logo />
-        <Stack direction={"row"} spacing={6}>
+        <Stack direction={"row"} spacing={6} textAlign="center">
           <Link href={"#"}>Privacy Policy</Link>
           <Link href={"#"}>Terms & Conditions</Link>
           <Link
@@ -72,7 +77,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Contact
+            Contact Us
           </Link>
         </Stack>
       </Container>
@@ -93,15 +98,6 @@ const Footer = () => {
         >
           <Text fontSize="16px">© 2022 PromptVerse. All rights reserved</Text>
           <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Twitter"}>
-              <a
-                href={"https://twitter.com/Rishi_Ganesh_I"}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter size={32} />
-              </a>
-            </SocialButton>
             <SocialButton label={"Github"}>
               <a
                 href={"https://github.com/leovaldez08"}
@@ -111,13 +107,35 @@ const Footer = () => {
                 <FaGithub size={32} />
               </a>
             </SocialButton>
-            <SocialButton label={"Github"}>
+            <SocialButton label={"Instagram"}>
               <a
                 href={"https://www.instagram.com/leo_valdez_28/"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaInstagram size={32} />
+              </a>
+            </SocialButton>
+            <SocialButton label={"Twitter"}>
+              <a
+                href={"https://twitter.com/Rishi_Ganesh_I"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter size={32} />
+              </a>
+            </SocialButton>
+            <SocialButton label={"Buy me a coffee"}>
+              <a
+                href={"https://www.buymeacoffee.com/rishiganesh"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://res.cloudinary.com/dosqxcotq/image/upload/v1684041342/PromptVerse%20Assets/BMC/bmc-logo-yellow_1_1_mewyii.png"
+                  alt="Buy Me A Coffee"
+                  style={{ height: 34, width: 32 }}
+                />
               </a>
             </SocialButton>
           </Stack>

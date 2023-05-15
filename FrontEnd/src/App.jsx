@@ -2,8 +2,8 @@ import "./App.css";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import NavBar from "./Components/NavBar";
 import HeroSection from "./Components/HeroSection";
-import MidjourneyPrompts from "./Components/MidJourney";
-import GptPrompts from "./Components/ChatGpt";
+import Midjourney from "./Components/MidJourney";
+import ChatGpt from "./Components/ChatGpt";
 import StableDiffusion from "./Components/StableDiffusion";
 import Footer from "./Components/Footer";
 
@@ -18,12 +18,12 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <div className="App">
-        <NavBar></NavBar>
-        <HeroSection></HeroSection>
-        <MidjourneyPrompts></MidjourneyPrompts>
-        <GptPrompts></GptPrompts>
-        <StableDiffusion></StableDiffusion>
-        <Footer></Footer>
+        <NavBar />
+        <HeroSection />
+        <Midjourney />
+        <ChatGpt />
+        <StableDiffusion />
+        <Footer />
       </div>
     </ChakraProvider>
   );

@@ -16,7 +16,7 @@ const GptPrompts = () => {
         <Divider mb="16px" borderColor="gray.400" borderBottomWidth="1.5px" />
       </Box>
       <Box px="2%">
-        <Carousel cardData={cardData}></Carousel>
+        <Carousel cardData={cardData} />
       </Box>
     </Box>
   );

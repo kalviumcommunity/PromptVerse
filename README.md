@@ -63,7 +63,7 @@ Wiki Outline Link: [Rishi Ganesh](https://wiki.kalvium.community/s/0d75b67a-f5e1
 
 | **Back-end**                                        |Status ⬇️|Link 🔗|
 | --------------------------------------------------- | ------ | -------------- |
-| - NodeJs - setting up a project with package.json   |✔️|[Repo](https://github.com/leovaldez08/courses-api) |
+| - NodeJs - setting up a project with package.json   |✔️|[Repo](https://github.com/leovaldez08/backend-api) |
 | - NodeJS Modules                                    |❌| |
 | - fs Module                                         |❌| |
 | - Streams and Buffers                               |❌| |

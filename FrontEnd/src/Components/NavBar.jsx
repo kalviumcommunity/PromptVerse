@@ -1,15 +1,21 @@
-import { Box, Flex, Button } from "@chakra-ui/react";
+import { Box, Flex, Button, Link } from "@chakra-ui/react";
 import logo from "./assets/logo1.svg";
 
 const NavBar = () => {
+  const handleScrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Flex
       alignItems="center"
       justifyContent="space-between"
       color="#333333"
-      px={{ base: "4%", md: "2%" }}
+      px={{ base: "5%", md: "5%" }}
       py={{ base: "20px", md: "40px" }}
-      maxWidth="1440px"
       mx="auto"
     >
       <Flex alignItems="center">
@@ -30,28 +36,38 @@ const NavBar = () => {
         <Box fontSize={{ base: "20px", md: "34px" }} fontWeight="bold">
           PromptVerse
         </Box>
-        <Button
-          variant="link"
-          color="#6C63FF"
-          fontSize={{ base: "14px", md: "17px" }}
-          fontWeight="bold"
-          pt="4px"
-          ml={{ base: "16px", md: "48px" }}
-          display={{ base: "none", md: "block" }}
+        <Link
+          href="https://learnprompting.org/docs/intro"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Learn
-        </Button>
-        <Button
-          variant="link"
-          color="#6C63FF"
-          fontSize={{ base: "14px", md: "1px" }}
-          fontWeight="bold"
-          pt="4px"
-          ml={{ base: "10px", md: "36px" }}
-          display={{ base: "none", md: "block" }}
-        >
-          About
-        </Button>
+          <Button
+            variant="link"
+            color="#6C63FF"
+            fontSize={{ base: "14px", md: "17px" }}
+            fontWeight="bold"
+            pt="4px"
+            ml={{ base: "16px", md: "48px" }}
+            mb={{ base: "8px", md: "0" }}
+            display={{ base: "none", md: "block" }}
+          >
+            Learn
+          </Button>
+        </Link>
+        <Link href="#" onClick={handleScrollToBottom}>
+          <Button
+            variant="link"
+            color="#6C63FF"
+            fontSize={{ base: "14px", md: "17px" }}
+            fontWeight="bold"
+            pt="4px"
+            ml={{ base: "10px", md: "36px" }}
+            mb={{ base: "8px", md: "0" }}
+            display={{ base: "none", md: "block" }}
+          >
+            About
+          </Button>
+        </Link>
       </Flex>
       <Button
         variant="solid"

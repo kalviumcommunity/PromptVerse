@@ -11,14 +11,14 @@ const Card = ({ imageUrl, imageAlt, title, tag }) => (
     }}
     maxW="xs"
     maxH="xs"
-    borderWidth="1px"
-    rounded="lg"
-    shadow="lg"
+    borderWidth="0.5px"
+    rounded="md"
+    shadow="md"
     m={2}
   >
-    <Image src={imageUrl} alt={imageAlt} roundedTop="lg" h={40} />
+    <Image src={imageUrl} alt={imageAlt} roundedTop="md" h={36} />
 
-    <Box p={4}>
+    <Box p={3}>
       <Badge rounded="full" px={2} colorScheme="teal" mb={2} fontSize="12px">
         {tag}
       </Badge>
@@ -57,9 +57,9 @@ const CardCarousel = ({ cardData }) => {
         onClick={disablePrevButton ? null : handlePrevClick}
       />
       <Flex overflowX="auto" flexWrap="nowrap" alignItems="center">
-        {visibleCards.map((card, index) => (
+        {visibleCards.map((card) => (
           <Card
-            key={index}
+            key={card.id}
             imageUrl={card.imageUrl}
             imageAlt={card.imageAlt}
             title={card.title}
