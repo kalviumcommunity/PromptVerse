@@ -1,3 +1,4 @@
+
 /* eslint-disable react/prop-types */
 import { Badge, Box, Flex, Image, Text } from "@chakra-ui/react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -9,7 +10,7 @@ const Card = ({ imageUrl, imageAlt, title, tag }) => (
     _dark={{
       bg: "gray.800",
     }}
-    maxW="xs"
+    maxW="xs" 
     maxH="xs"
     borderWidth="0.5px"
     rounded="md"

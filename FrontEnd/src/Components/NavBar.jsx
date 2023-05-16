@@ -21,7 +21,7 @@ const NavBar = () => {
       <Flex alignItems="center">
         <Box
           height={{ base: "32px", md: "auto" }}
-          width={{ base: "32px", md: "50%" }}
+          width={{ base: "32px", md: "auto" }}
           position="relative"
           mt="0.8%"
         >
