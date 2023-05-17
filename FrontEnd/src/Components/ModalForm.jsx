@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
+import PropTypes from "prop-types";
 import {
   Button,
   Image,
@@ -191,7 +191,6 @@ function ModalForm({ onClose }) {
                     mt="24px"
                   >
                     <Box>
-      
                       <Text fontSize="14px" fontStyle="italic" color="#B3B3B3">
                         *All the Fields are Mandatory to fill
                       </Text>
@@ -255,5 +254,9 @@ function ModalForm({ onClose }) {
     </>
   );
 }
+
+ModalForm.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
 
 export default ModalForm;

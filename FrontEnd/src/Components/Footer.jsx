@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import {
   Box,
   chakra,
@@ -12,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 import logo from "./assets/logo1.svg";
+import PropTypes from "prop-types";
 
 const Logo = () => {
   return (
@@ -143,6 +143,12 @@ const Footer = () => {
       </Box>
     </Box>
   );
+};
+
+SocialButton.propTypes = {
+  label: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  children: PropTypes.func,
 };
 
 export default Footer;

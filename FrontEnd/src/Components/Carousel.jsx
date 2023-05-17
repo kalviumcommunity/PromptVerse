@@ -1,8 +1,7 @@
-
-/* eslint-disable react/prop-types */
 import { Badge, Box, Flex, Image, Text } from "@chakra-ui/react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 const Card = ({ imageUrl, imageAlt, title, tag }) => (
   <Box
@@ -10,7 +9,7 @@ const Card = ({ imageUrl, imageAlt, title, tag }) => (
     _dark={{
       bg: "gray.800",
     }}
-    maxW="xs" 
+    maxW="xs"
     maxH="xs"
     borderWidth="0.5px"
     rounded="md"
@@ -77,6 +76,17 @@ const CardCarousel = ({ cardData }) => {
       />
     </Flex>
   );
+};
+
+Card.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  imageAlt: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+};
+
+CardCarousel.propTypes = {
+  cardData: PropTypes.array.isRequired,
 };
 
 export default CardCarousel;

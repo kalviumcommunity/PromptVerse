@@ -1,8 +1,8 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import HomePage from "./Pages/HomePage";
-// import ModalForm from "./Components/ModalForm";
-import ModalPage from "./Components/ModalPage";
+import ModalForm from "./Components/ModalForm";
+// import ModalPage from "./Components/ModalPage";
 import "./App.css";
 
 const theme = extendTheme({
@@ -17,7 +17,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Router>
         <Routes>
-          <Route exact path="/" element={<ModalPage />} />
+          <Route exact path="/" element={<ModalForm />} />
           {/* <Route element={<ModalPage />} /> */}
         </Routes>
       </Router>
