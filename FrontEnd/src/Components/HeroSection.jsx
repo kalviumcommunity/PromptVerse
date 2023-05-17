@@ -95,7 +95,6 @@ const HeroSection = () => {
             marginRight={{ base: 0, md: "28px" }}
             borderRadius="3px"
             _hover={{ color: "none" }}
-            // maxW={{ base: "100%", md: "100%" }}
           >
             <Text fontSize="14px" fontWeight="bold" pr="8px">
               Add Prompts
