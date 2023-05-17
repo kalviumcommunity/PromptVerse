@@ -100,34 +100,34 @@ const Footer = () => {
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Github"}>
               <a
-                href={"https://github.com/leovaldez08"}
+                href="https://github.com/leovaldez08"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaGithub size={32} />
               </a>
             </SocialButton>
-            <SocialButton label={"Instagram"}>
+            <SocialButton label="Instagram">
               <a
-                href={"https://www.instagram.com/leo_valdez_28/"}
+                href="https://www.instagram.com/leo_valdez_28/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaInstagram size={32} />
               </a>
             </SocialButton>
-            <SocialButton label={"Twitter"}>
+            <SocialButton label="Twitter">
               <a
-                href={"https://twitter.com/Rishi_Ganesh_I"}
+                href="https://twitter.com/Rishi_Ganesh_I"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaTwitter size={32} />
               </a>
             </SocialButton>
-            <SocialButton label={"Buy me a coffee"}>
+            <SocialButton label="Buy me a coffee">
               <a
-                href={"https://www.buymeacoffee.com/rishiganesh"}
+                href="https://www.buymeacoffee.com/rishiganesh"
                 target="_blank"
                 rel="noopener noreferrer"
               >
