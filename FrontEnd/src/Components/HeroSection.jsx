@@ -1,7 +1,7 @@
-import { Text, Box, Flex, Button } from "@chakra-ui/react";
+import { Text, Box, Flex, Button, Link, Image } from "@chakra-ui/react";
 import { MdAddCircle, MdOpenInNew } from "react-icons/md";
-import heroimage from "./assets/heroimage.svg";
 import { TypeAnimation } from "react-type-animation";
+import heroimage from "./assets/heroimage.svg";
 
 const HeroSection = () => {
   let x = Infinity;
@@ -11,18 +11,21 @@ const HeroSection = () => {
       alignItems="center"
       justifyContent="space-between"
       bg="#FFFFFF"
-      maxWidth="1440px"
       mx="auto"
-      px="2%"
-      py={{ base: "0.5", sm: "20px" }}
+      px={{ base: "4%", md: "5%" }}
+      py={{ base: "20px", sm: "40px" }}
       flexDirection={{ base: "column-reverse", md: "row" }}
     >
-      {/* Left section */}
-      <Box maxWidth="90%" paddingBottom={{ base: "48px", md: 0 }}>
-        <Box paddingBottom="36px" height="110px">
-          {/* Dynamic Text */}
+      <Box
+        maxWidth={{ base: "100%", md: "100%" }}
+        paddingBottom={{ base: "48px", md: 0 }}
+      >
+        <Box
+          paddingBottom={{ base: "16px", md: "48px" }}
+          height={{ base: "60px", md: "110px" }}
+        >
           <Text
-            fontSize={{ base: "30px", md: "46px" }}
+            fontSize={{ base: "26px", md: "48px" }}
             fontWeight="bold"
             bgGradient="linear-gradient(90.02deg, #01CFC7 0.01%, #6C63FF 32.08%, #00D2C6 64.88%, #6C63FF 98.2%)"
             bgClip="text"
@@ -47,9 +50,8 @@ const HeroSection = () => {
           </Text>
         </Box>
 
-        {/* Title */}
         <Box
-          fontSize={{ base: "24px", md: "36px" }}
+          fontSize={{ base: "22px", md: "36px" }}
           fontWeight="extrabold"
           paddingBottom="4px"
           color="#333333"
@@ -58,9 +60,8 @@ const HeroSection = () => {
           Discover the Power of AI Prompts
         </Box>
 
-        {/* Subtitle */}
         <Box
-          fontSize="24px"
+          fontSize={{ base: "18px", md: "24px" }}
           fontWeight="bold"
           paddingBottom="12px"
           color="#333333"
@@ -68,8 +69,11 @@ const HeroSection = () => {
           Join our AI prompt community
         </Box>
 
-        {/* Description */}
-        <Box fontSize="14px" paddingBottom="28px" color="#333333">
+        <Box
+          fontSize={{ base: "12px", md: "14px" }}
+          paddingBottom="28px"
+          color="#333333"
+        >
           <Text>
             Elevate your conversations with our collection of AI prompts. Share
             your unique
@@ -81,14 +85,13 @@ const HeroSection = () => {
           <Text>spark new conversations today!</Text>
         </Box>
 
-        {/* Buttons */}
-        <Flex>
-          {/* Add Prompts Button */}
+        <Flex flexDirection={{ base: "column", md: "row" }}>
           <Button
             variant="solid"
             color="white"
             bg="#6C63FF"
             padding="10px 16px"
+            marginBottom={{ base: "12px", md: 0 }}
             marginRight={{ base: 0, md: "28px" }}
             borderRadius="3px"
             _hover={{ color: "none" }}
@@ -99,31 +102,35 @@ const HeroSection = () => {
             <MdAddCircle size={24} />
           </Button>
 
-          {/* Learn Prompting Button */}
-          <Button
-            variant="solid"
-            color="#6C63FF"
-            bg="#E5E3FF"
-            padding="10px 16px"
-            borderRadius="3px"
-            border="0.5px solid rgba(205, 205, 205, 0.1)"
-            _hover={{ color: "none" }}
+          <Link
+            href="https://learnprompting.org/docs/intro"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Text fontSize="14px" fontWeight="bold" pr="8px">
-              Learn Prompting
-            </Text>
-            <MdOpenInNew size={20} />
-          </Button>
+            <Button
+              variant="solid"
+              color="#6C63FF"
+              bg="#E5E3FF"
+              padding="10px 16px"
+              borderRadius="3px"
+              border="0.5px solid rgba(205, 205, 205, 0.1)"
+              _hover={{ color: "none" }}
+            >
+              <Text fontSize="14px" fontWeight="bold" pr="8px">
+                Learn Prompting
+              </Text>
+              <MdOpenInNew size={20} />
+            </Button>
+          </Link>
         </Flex>
       </Box>
 
-      {/* Right section */}
       <Box
         position="relative"
         height={{ base: "240px", md: "auto" }}
         width={{ base: "100%", md: "50%" }}
       >
-        <img
+        <Image
           src={heroimage}
           alt="image"
           style={{ marginLeft: "12%" }}

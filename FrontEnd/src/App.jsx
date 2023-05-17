@@ -1,7 +1,7 @@
-import "./App.css";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import NavBar from "./Components/NavBar";
-import HeroSection from "./Components/HeroSection";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
+import "./App.css";
 
 const theme = extendTheme({
   fonts: {
@@ -13,10 +13,11 @@ const theme = extendTheme({
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <div className="App">
-        <NavBar></NavBar>
-        <HeroSection></HeroSection>
-      </div>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+        </Routes>
+      </Router>
     </ChakraProvider>
   );
 }
