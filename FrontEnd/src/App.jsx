@@ -1,7 +1,7 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
 import HomePage from "./Pages/HomePage";
+import "./App.css";
 
 const theme = extendTheme({
   fonts: {

@@ -1,20 +1,7 @@
 import { Box, Flex, Button, Link } from "@chakra-ui/react";
 import logo from "./assets/logo1.svg";
-import { useAuth0 } from "@auth0/auth0-react";
-import { useEffect, useState } from "react";
 
 const NavBar = () => {
-  const [button1, setButtonValue] = useState("");
-  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      setButtonValue("Logout");
-    } else {
-      setButtonValue("Register / Login");
-    }
-  }, [isAuthenticated]);
-
   const handleScrollToBottom = () => {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
@@ -94,14 +81,8 @@ const NavBar = () => {
         _hover={{}}
         _focus={{}}
         _active={{}}
-        onClick={
-          isAuthenticated
-            ? () =>
-                logout({ logoutParams: { returnTo: window.location.origin } })
-            : loginWithRedirect
-        }
       >
-        {button1}
+        Register / Login
       </Button>
     </Flex>
   );

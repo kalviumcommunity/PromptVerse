@@ -8,12 +8,12 @@ import Footer from "../Components/Footer";
 const HomePage = () => {
   return (
     <div>
-      <NavBar />
-      <HeroSection />
-      <MidjourneyPrompts />
-      <GptPrompts />
-      <StableDiffusion />
-      <Footer />
+      <NavBar></NavBar>
+      <HeroSection></HeroSection>
+      <MidjourneyPrompts></MidjourneyPrompts>
+      <GptPrompts></GptPrompts>
+      <StableDiffusion></StableDiffusion>
+      <Footer></Footer>
     </div>
   );
 };
