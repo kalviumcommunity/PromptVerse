@@ -94,7 +94,9 @@ const HeroSection = () => {
             marginBottom={{ base: "12px", md: 0 }}
             marginRight={{ base: 0, md: "28px" }}
             borderRadius="3px"
-            _hover={{ color: "none" }}
+            _hover={{}}
+            _focus={{}}
+            _active={{}}
           >
             <Text fontSize="14px" fontWeight="bold" pr="8px">
               Add Prompts
@@ -114,7 +116,9 @@ const HeroSection = () => {
               padding="10px 16px"
               borderRadius="3px"
               border="0.5px solid rgba(205, 205, 205, 0.1)"
-              _hover={{ color: "none" }}
+              _hover={{}}
+              _focus={{}}
+              _active={{}}
             >
               <Text fontSize="14px" fontWeight="bold" pr="8px">
                 Learn Prompting

@@ -78,6 +78,9 @@ const NavBar = () => {
         borderRadius="3"
         px="16px"
         py="10px"
+        _hover={{}}
+        _focus={{}}
+        _active={{}}
       >
         Register / Login
       </Button>

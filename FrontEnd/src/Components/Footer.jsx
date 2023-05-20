@@ -146,9 +146,9 @@ const Footer = () => {
 };
 
 SocialButton.propTypes = {
-  label: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  children: PropTypes.func,
+  label: PropTypes.string,
+  href: PropTypes.string,
+  children: PropTypes.object,
 };
 
 export default Footer;
