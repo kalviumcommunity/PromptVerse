@@ -52,7 +52,7 @@ Wiki Outline Link: [Rishi Ganesh](https://wiki.kalvium.community/s/0d75b67a-f5e1
 | - ReactJS app initialization             | ✔️        | [PR #1](https://github.com/kalviumcommunity/PromptVerse/pull/3)                                                                             |
 | - Application components created         | ✔️        | [PR #2](https://github.com/kalviumcommunity/PromptVerse/pull/4)                                                                             |
 | - IDE Setup                              | ✔️        | [PR #2](https://github.com/kalviumcommunity/PromptVerse/pull/4)                                                                             |
-| - NodeJs REPL                            | ❌        |                                                                                                                                             |
+| - NodeJS REPL                            | ❌        |                                                                                                                                             |
 | - Using the public folder to serve files | ✔️        | [PR #3](https://github.com/kalviumcommunity/PromptVerse/pull/5/files#diff-ce5c4a98d9171065bbcc360e73f3a535bb7c0111e47e90da5c6ae3121123fa21) |
 | - Postman Use for Testing                | ❌        |                                                                                                                                             |
 | - Authentication                         | ❌        |                                                                                                                                             |
