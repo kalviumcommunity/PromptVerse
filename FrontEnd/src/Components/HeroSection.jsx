@@ -1,7 +1,8 @@
 import { Text, Box, Flex, Button, Link, Image } from "@chakra-ui/react";
-import { MdAddCircle, MdOpenInNew } from "react-icons/md";
+import { MdOpenInNew } from "react-icons/md";
 import { TypeAnimation } from "react-type-animation";
 import heroimage from "./assets/heroimage.svg";
+import ModalForm from "./ModalForm";
 
 const HeroSection = () => {
   let x = Infinity;
@@ -86,24 +87,7 @@ const HeroSection = () => {
         </Box>
 
         <Flex flexDirection={{ base: "column", md: "row" }}>
-          <Button
-            variant="solid"
-            color="white"
-            bg="#6C63FF"
-            padding="10px 16px"
-            marginBottom={{ base: "12px", md: 0 }}
-            marginRight={{ base: 0, md: "28px" }}
-            borderRadius="3px"
-            _hover={{}}
-            _focus={{}}
-            _active={{}}
-          >
-            <Text fontSize="14px" fontWeight="bold" pr="8px">
-              Add Prompts
-            </Text>
-            <MdAddCircle size={24} />
-          </Button>
-
+          <ModalForm />
           <Link
             href="https://learnprompting.org/docs/intro"
             target="_blank"
