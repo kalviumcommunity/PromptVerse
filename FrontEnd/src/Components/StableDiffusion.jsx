@@ -1,9 +1,23 @@
 import { Box, Divider, Flex, Text } from "@chakra-ui/react";
 import { MdAddCircle } from "react-icons/md";
+import { useState, useEffect } from "react";
 import Carousel from "./Carousel";
-import cardData from "./CardData/StableDiffusion";
 
 const StableDiffusion = () => {
+  const [cardData, setCardData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(
+        "http://localhost:4002/api/prompts/stablediffusion"
+      );
+      const data = await response.json();
+      setCardData(data);
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <Box>
       <Box px="4%">
