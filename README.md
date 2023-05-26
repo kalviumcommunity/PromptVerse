@@ -2,7 +2,7 @@
 
 Welcome to PromptVerse! 🚀
 
-PromptVerse is your go-to platform for sthought-provoking AI prompts. With our community-driven approach, we aim to foster creativity, intellect, and collaboration among users. Spark your imagination, connect with like-minded individuals, and discover a world of insightful conversations.
+PromptVerse is your go-to platform for thought-provoking AI prompts. With our community-driven approach, we aim to foster creativity, intellect, and collaboration among users. Spark your imagination, connect with like-minded individuals, and discover a world of insightful conversations.
 
 ## Key Features
 
@@ -45,33 +45,33 @@ If you encounter any issues while using this project, please create a new issue 
 
 Wiki Outline Link: [Rishi Ganesh](https://wiki.kalvium.community/s/0d75b67a-f5e1-4a4d-9632-4dd7c6559111)
 
-| **Front-end**                            | Status ⬇️ | Link 🔗                                                                                                                                     |
-| ---------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| - Low-fid design for your application    | ✔️        | [Figma Link](https://www.figma.com/file/ubDFcFMyF1oQHYMi8SDfr7/PromptVerse-MVP-Low-Fid?node-id=0%3A1&t=8rEnAbCQA6JkRWhG-1)                  |
-| - High-fid design for your application   | ✔️        | [Figma Link](https://www.figma.com/file/pJuSvqsVbcjtYedazZ3Wwe/PromptVerse-MVP-High-Fid?node-id=0%3A1&t=juxvpX56JRkjZ05W-1)                 |
-| - ReactJS app initialization             | ✔️        | [PR #1](https://github.com/kalviumcommunity/PromptVerse/pull/3)                                                                             |
-| - Application components created         | ✔️        | [PR #2](https://github.com/kalviumcommunity/PromptVerse/pull/4)                                                                             |
-| - IDE Setup                              | ✔️        | [PR #2](https://github.com/kalviumcommunity/PromptVerse/pull/4)                                                                             |
-| - NodeJs REPL                            | ❌        |                                                                                                                                             |
-| - Using the public folder to serve files | ✔️        | [PR #3](https://github.com/kalviumcommunity/PromptVerse/pull/5/files#diff-ce5c4a98d9171065bbcc360e73f3a535bb7c0111e47e90da5c6ae3121123fa21) |
-| - Postman Use for Testing                | ❌        |                                                                                                                                             |
-| - Authentication                         | ❌        |                                                                                                                                             |
-| - Deployment                             | ❌        |                                                                                                                                             |
+| **Front-end**                            | Status ⬇️                                                       | Link 🔗                                                                                                                                     |
+| ---------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| - Low-fid design for your application    | ✔️                                                              | [Figma Link](https://www.figma.com/file/ubDFcFMyF1oQHYMi8SDfr7/PromptVerse-MVP-Low-Fid?node-id=0%3A1&t=8rEnAbCQA6JkRWhG-1)                  |
+| - High-fid design for your application   | ✔️                                                              | [Figma Link](https://www.figma.com/file/pJuSvqsVbcjtYedazZ3Wwe/PromptVerse-MVP-High-Fid?node-id=0%3A1&t=juxvpX56JRkjZ05W-1)                 |
+| - ReactJS app initialization             | ✔️                                                              | [PR #1](https://github.com/kalviumcommunity/PromptVerse/pull/3)                                                                             |
+| - Application components created         | ✔️                                                              | [PR #2](https://github.com/kalviumcommunity/PromptVerse/pull/4)                                                                             |
+| - IDE Setup                              | ✔️                                                              | [PR #2](https://github.com/kalviumcommunity/PromptVerse/pull/4)                                                                             |
+| - NodeJS REPL                            | [PR #7](https://github.com/kalviumcommunity/PromptVerse/pull/7) |                                                                                                                                             |
+| - Using the public folder to serve files | ✔️                                                              | [PR #3](https://github.com/kalviumcommunity/PromptVerse/pull/5/files#diff-ce5c4a98d9171065bbcc360e73f3a535bb7c0111e47e90da5c6ae3121123fa21) |
+| - Postman Use for Testing                | ✔️                                                              |                                                                                                                                             |
+| - Authentication                         | ✔️                                                              | [PR #10](https://github.com/kalviumcommunity/PromptVerse/pull/10)                                                                           |
+| - Deployment                             | ❌                                                              |                                                                                                                                             |
 
-| **Back-end**                                      | Status ⬇️ | Link 🔗                                            |
-| ------------------------------------------------- | --------- | -------------------------------------------------- |
-| - NodeJs - setting up a project with package.json | ✔️        | [Repo](https://github.com/leovaldez08/backend-api) |
-| - NodeJS Modules                                  | ❌        |                                                    |
-| - fs Module                                       | ❌        |                                                    |
-| - Streams and Buffers                             | ❌        |                                                    |
-| - NPM                                             | ❌        |                                                    |
-| - Nodemon                                         | ❌        |                                                    |
-| - Events in Nodejs                                | ❌        |                                                    |
-| - Express JS - first route                        | ❌        |                                                    |
-| - ExpressJS - additional routes                   | ❌        |                                                    |
-| - Template Engines                                | ❌        |                                                    |
-| - Partials                                        | ❌        |                                                    |
-| - Middlewares                                     | ❌        |                                                    |
+| **Back-end**                                      | Status ⬇️ | Link 🔗                                                         |
+| ------------------------------------------------- | --------- | --------------------------------------------------------------- |
+| - NodeJs - setting up a project with package.json | ✔️        | [PR #7](https://github.com/kalviumcommunity/PromptVerse/pull/7) |
+| - NodeJS Modules                                  | ❌        |                                                                 |
+| - fs Module                                       | ❌        |                                                                 |
+| - Streams and Buffers                             | ❌        |                                                                 |
+| - NPM                                             | ❌        |                                                                 |
+| - Nodemon                                         | ❌        |                                                                 |
+| - Events in Nodejs                                | ❌        |                                                                 |
+| - Express JS - first route                        | ❌        |                                                                 |
+| - ExpressJS - additional routes                   | ❌        |                                                                 |
+| - Template Engines                                | ❌        |                                                                 |
+| - Partials                                        | ❌        |                                                                 |
+| - Middlewares                                     | ❌        |                                                                 |
 
 | **Databases**                               | Status ⬇️ | Link 🔗                                                                                                  |
 | ------------------------------------------- | --------- | -------------------------------------------------------------------------------------------------------- |

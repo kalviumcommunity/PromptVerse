@@ -1,12 +1,32 @@
 import { Box, Flex, Button, Link } from "@chakra-ui/react";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useEffect } from "react";
 import logo from "./assets/logo1.svg";
 
 const NavBar = () => {
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+
   const handleScrollToBottom = () => {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
       behavior: "smooth",
     });
+  };
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      document.getElementById("auth-button").textContent = "Logout";
+    } else {
+      document.getElementById("auth-button").textContent = "Register / Login";
+    }
+  }, [isAuthenticated]);
+
+  const handleButtonClick = () => {
+    if (isAuthenticated) {
+      logout({ logoutParams: { returnTo: window.location.origin } });
+    } else {
+      loginWithRedirect();
+    }
   };
 
   return (
@@ -81,9 +101,9 @@ const NavBar = () => {
         _hover={{}}
         _focus={{}}
         _active={{}}
-      >
-        Register / Login
-      </Button>
+        onClick={handleButtonClick}
+        id="auth-button"
+      />
     </Flex>
   );
 };
