@@ -3,7 +3,6 @@ import HeroSection from "../Components/HeroSection";
 import MidjourneyPrompts from "../Components/MidJourney";
 import GptPrompts from "../Components/ChatGpt";
 import StableDiffusion from "../Components/StableDiffusion";
-import DetailedPage from "../Components/PromptDetails";
 import Footer from "../Components/Footer";
 
 const HomePage = () => {
@@ -14,7 +13,6 @@ const HomePage = () => {
       <MidjourneyPrompts />
       <GptPrompts />
       <StableDiffusion />
-      <DetailedPage />
       <Footer />
     </div>
   );

@@ -8,7 +8,7 @@ const GptPrompts = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("http://localhost:4002/api/prompts/chatgpt");
+      const response = await fetch("http://localhost:3000/api/prompts/chatgpt");
       const data = await response.json();
       setCardData(data);
     }

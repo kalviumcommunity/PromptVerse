@@ -2,13 +2,17 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend server of PromptVerse",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/kalviumcommunity/PromptVerse",
   "author": "Rishi Ganesh",
   "license": "MIT",
+  "scripts":{
+    "start":"nodemon server.js"
+  },
   "private": false,
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
   }
 }

@@ -9,7 +9,7 @@ const StableDiffusion = () => {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        "http://localhost:4002/api/prompts/stablediffusion"
+        "http://localhost:3000/api/prompts/stablediffusion"
       );
       const data = await response.json();
       setCardData(data);

@@ -1,7 +1,7 @@
 import { Box, Flex, Divider, Image, Text, Badge } from "@chakra-ui/react";
 import ImageCarousel from "./ImageCarousel";
 
-const PromptPage = () => {
+const PromptDetails = () => {
   return (
     <Flex w="100%" justify="space-between" px="5%">
       <Box w="42%">
@@ -89,4 +89,4 @@ const PromptPage = () => {
   );
 };
 
-export default PromptPage;
+export default PromptDetails;
