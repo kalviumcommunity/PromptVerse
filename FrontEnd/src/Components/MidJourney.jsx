@@ -9,7 +9,7 @@ const MidjouneyPrompts = () => {
       <Box px="4%">
         <Flex mt="36px" mb="12px" ml="12px" alignItems="center">
           <Text fontSize="28px" fontWeight="bold" mr="12px">
-            Midjouney Prompts
+            Midjourney Prompts
           </Text>
           <MdAddCircle size={36} />
         </Flex>

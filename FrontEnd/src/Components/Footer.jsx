@@ -9,13 +9,13 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 import logo from "./assets/logo1.svg";
 import PropTypes from "prop-types";
 
 const Logo = () => {
   return (
-    <a href="#">
+    <Link href="#">
       <Flex mb="24px" mt="24px">
         <img src={logo} alt="logo" />
         <Text
@@ -26,31 +26,40 @@ const Logo = () => {
           PromptVerse
         </Text>
       </Flex>
-    </a>
+    </Link>
   );
 };
 
 const SocialButton = ({ children, label, href }) => {
   return (
-    <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
-      w={8}
-      h={8}
-      cursor={"pointer"}
-      as={"a"}
-      href={href}
-      display={"inline-flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      transition={"background 0.3s ease"}
+    <chakra.span
+      display="inline-block"
+      position="relative"
+      zIndex={0}
+      _before={{
+        content: '""',
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: -1,
+        opacity: 0,
+        transition: "opacity 0.3s ease",
+        bg: useColorModeValue("blackAlpha.100", "whiteAlpha.100"),
+        borderRadius: "full",
+      }}
       _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+        _before: {
+          opacity: 1,
+        },
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
+      <Link href={href} target="_blank" rel="noopener noreferrer">
+        <chakra.span>{children}</chakra.span>
+      </Link>
+    </chakra.span>
   );
 };
 
@@ -98,45 +107,39 @@ const Footer = () => {
         >
           <Text fontSize="16px">© 2022 PromptVerse. All rights reserved</Text>
           <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Github"}>
-              <a
-                href="https://github.com/leovaldez08"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub size={32} />
-              </a>
+            <SocialButton
+              label={"GitHub"}
+              href={"https://github.com/leovaldez08/"}
+            >
+              <FaGithub size={30} />
             </SocialButton>
-            <SocialButton label="Instagram">
-              <a
-                href="https://www.instagram.com/leo_valdez_28/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram size={32} />
-              </a>
+            <SocialButton
+              label={"LinkedIn"}
+              href={"https://www.linkedin.com/in/rishi-ganesh/"}
+            >
+              <FaLinkedin size={30} />
             </SocialButton>
-            <SocialButton label="Twitter">
-              <a
-                href="https://twitter.com/Rishi_Ganesh_I"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter size={32} />
-              </a>
+            <SocialButton
+              label={"Twitter"}
+              href={"https://twitter.com/Rishi_Ganesh_I/"}
+            >
+              <FaTwitter size={30} />
             </SocialButton>
-            <SocialButton label="Buy me a coffee">
-              <a
-                href="https://www.buymeacoffee.com/rishiganesh"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://res.cloudinary.com/dosqxcotq/image/upload/v1684041342/PromptVerse%20Assets/BMC/bmc-logo-yellow_1_1_mewyii.png"
-                  alt="Buy Me A Coffee"
-                  style={{ height: 34, width: 32 }}
-                />
-              </a>
+            <SocialButton
+              label={"Instagram"}
+              href={"https://www.instagram.com/leo_valdez_28/"}
+            >
+              <FaInstagram size={30} />
+            </SocialButton>
+            <SocialButton
+              label="Buy me a coffee"
+              href={"https://www.buymeacoffee.com/rishiganesh/"}
+            >
+              <img
+                src="https://res.cloudinary.com/dosqxcotq/image/upload/v1684041342/PromptVerse%20Assets/BMC/bmc-logo-yellow_1_1_mewyii.png"
+                alt="Buy Me A Coffee"
+                style={{ height: 34, width: 32 }}
+              />
             </SocialButton>
           </Stack>
         </Container>
@@ -146,9 +149,9 @@ const Footer = () => {
 };
 
 SocialButton.propTypes = {
-  label: PropTypes.string,
-  href: PropTypes.string,
-  children: PropTypes.object,
+  children: PropTypes.object.isRequired,
+  label: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
 };
 
 export default Footer;

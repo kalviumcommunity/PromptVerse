@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Text, Box, Flex, Button, Link, Image } from "@chakra-ui/react";
 import { MdOpenInNew } from "react-icons/md";
 import { TypeAnimation } from "react-type-animation";
@@ -5,7 +6,12 @@ import heroimage from "./assets/heroimage.svg";
 import ModalForm from "./ModalForm";
 
 const HeroSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   let x = Infinity;
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <Flex
@@ -26,7 +32,7 @@ const HeroSection = () => {
           height={{ base: "60px", md: "110px" }}
         >
           <Text
-            fontSize={{ base: "26px", md: "48px" }}
+            fontSize={{ base: "26px", md: "46px" }}
             fontWeight="bold"
             bgGradient="linear-gradient(90.02deg, #01CFC7 0.01%, #6C63FF 32.08%, #00D2C6 64.88%, #6C63FF 98.2%)"
             bgClip="text"
@@ -43,7 +49,6 @@ const HeroSection = () => {
                 "ChatGPT Prompts",
                 1500,
               ]}
-              cursor={true}
               deletionSpeed={20}
               speed={15}
               repeat={x}
@@ -52,7 +57,7 @@ const HeroSection = () => {
         </Box>
 
         <Box
-          fontSize={{ base: "22px", md: "36px" }}
+          fontSize={{ base: "22px", md: "34px" }}
           fontWeight="extrabold"
           paddingBottom="4px"
           color="#333333"
@@ -87,7 +92,7 @@ const HeroSection = () => {
         </Box>
 
         <Flex flexDirection={{ base: "column", md: "row" }}>
-          <ModalForm />
+          <ModalForm isOpen={isModalOpen} onClose={handleCloseModal} />
           <Link
             href="https://learnprompting.org/docs/intro"
             target="_blank"
@@ -104,7 +109,7 @@ const HeroSection = () => {
               _focus={{}}
               _active={{}}
             >
-              <Text fontSize="14px" fontWeight="bold" pr="8px">
+              <Text fontSize="15px" fontWeight="bold" pr="8px">
                 Learn Prompting
               </Text>
               <MdOpenInNew size={20} />

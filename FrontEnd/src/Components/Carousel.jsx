@@ -15,9 +15,9 @@ const Card = ({ imageUrl, imageAlt, title, tag }) => (
     rounded="md"
     shadow="md"
     m={2}
+    cursor="pointer"
   >
     <Image src={imageUrl} alt={imageAlt} roundedTop="md" h={36} />
-
     <Box p={3}>
       <Badge rounded="full" px={2} colorScheme="teal" mb={2} fontSize="12px">
         {tag}
