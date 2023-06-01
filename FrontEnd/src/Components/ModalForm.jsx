@@ -69,6 +69,7 @@ function ModalForm({ onClose }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formValues);
+    setFormValues({});
     handleCloseModal();
   };
 

@@ -1,15 +1,12 @@
 import { Box, Flex, Divider, Image, Text, Badge } from "@chakra-ui/react";
 import ImageCarousel from "./ImageCarousel";
 import cardData from "./CardData/Midjourney";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
 
 const PromptPage = () => {
   const card = cardData.find((item) => item.id === 1);
 
   return (
     <Box>
-      <NavBar />
       <Flex w="100%" justify="space-between" px="5%" py="3%">
         <Box w="42%">
           <Image
@@ -86,7 +83,6 @@ const PromptPage = () => {
           </Box>
         </Box>
       </Flex>
-      <Footer />
     </Box>
   );
 };

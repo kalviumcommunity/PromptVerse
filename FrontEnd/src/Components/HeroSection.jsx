@@ -1,17 +1,20 @@
-import { useState } from "react";
-import { Text, Box, Flex, Button, Link, Image } from "@chakra-ui/react";
+import {
+  Text,
+  Box,
+  Flex,
+  Button,
+  Link,
+  Image,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { MdOpenInNew } from "react-icons/md";
 import { TypeAnimation } from "react-type-animation";
 import heroimage from "./assets/heroimage.svg";
 import ModalForm from "./ModalForm";
 
 const HeroSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
   let x = Infinity;
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
 
   return (
     <Flex
@@ -92,7 +95,7 @@ const HeroSection = () => {
         </Box>
 
         <Flex flexDirection={{ base: "column", md: "row" }}>
-          <ModalForm isOpen={isModalOpen} onClose={handleCloseModal} />
+          <ModalForm isOpen={isOpen} onClick={onOpen} onClose={onClose} />
           <Link
             href="https://learnprompting.org/docs/intro"
             target="_blank"
