@@ -2,9 +2,8 @@ import { Box, Flex, Divider, Image, Text, Badge } from "@chakra-ui/react";
 import ImageCarousel from "./ImageCarousel";
 import cardData from "./CardData/Midjourney";
 
-const PromptPage = () => {
+const PromptDetails = () => {
   const card = cardData.find((item) => item.id === 1);
-
   return (
     <Box>
       <Flex w="100%" justify="space-between" px="5%" py="3%">
@@ -87,4 +86,4 @@ const PromptPage = () => {
   );
 };
 
-export default PromptPage;
+export default PromptDetails;
