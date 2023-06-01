@@ -2,7 +2,7 @@ import { Box, Image, HStack, Text, Flex } from "@chakra-ui/react";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const ImageCarousel = ({ imgurl }) => {
+const ImageCarousel = ({ imageUrlArr }) => {
   const arrowStyles = {
     cursor: "pointer",
     pos: "absolute",
@@ -23,7 +23,7 @@ const ImageCarousel = ({ imgurl }) => {
   };
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slidesCount = imgurl.length;
+  const slidesCount = imageUrlArr.length;
 
   const prevSlide = () => {
     setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
@@ -46,7 +46,7 @@ const ImageCarousel = ({ imgurl }) => {
     <Flex w="full" bg="#FFFFFF" alignItems="center" justifyContent="center">
       <Flex w="full" overflow="hidden" pos="relative">
         <Flex h="400px" w="full" {...carouselStyle}>
-          {imgurl.map((imageUrl, sid) => (
+          {imageUrlArr.map((imageUrl, sid) => (
             <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
               <Image
                 src={imageUrl}
@@ -89,7 +89,7 @@ const ImageCarousel = ({ imgurl }) => {
 };
 
 ImageCarousel.propTypes = {
-  imgurl: PropTypes.arrayOf(PropTypes.string).isRequired,
+  imageUrlArr: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default ImageCarousel;
