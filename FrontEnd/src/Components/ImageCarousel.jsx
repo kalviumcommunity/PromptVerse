@@ -1,8 +1,8 @@
 import { Box, Image, HStack, Text, Flex } from "@chakra-ui/react";
 import { useState } from "react";
-import slides from "./CardData/Slides";
+import PropTypes from "prop-types";
 
-const ImageCarousel = () => {
+const ImageCarousel = ({ imageUrlArr }) => {
   const arrowStyles = {
     cursor: "pointer",
     pos: "absolute",
@@ -23,7 +23,7 @@ const ImageCarousel = () => {
   };
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slidesCount = slides.length;
+  const slidesCount = imageUrlArr.length;
 
   const prevSlide = () => {
     setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
@@ -41,14 +41,15 @@ const ImageCarousel = () => {
     transition: "all .5s",
     ml: `-${currentSlide * 100}%`,
   };
+
   return (
     <Flex w="full" bg="#FFFFFF" alignItems="center" justifyContent="center">
       <Flex w="full" overflow="hidden" pos="relative">
-        <Flex h="350px" w="full" {...carouselStyle}>
-          {slides.map((slide, sid) => (
+        <Flex h="400px" w="full" {...carouselStyle}>
+          {imageUrlArr.map((imageUrl, sid) => (
             <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
               <Image
-                src={slide.img}
+                src={imageUrl}
                 alt="carousel image"
                 boxSize="full"
                 backgroundSize="cover"
@@ -85,6 +86,10 @@ const ImageCarousel = () => {
       </Flex>
     </Flex>
   );
+};
+
+ImageCarousel.propTypes = {
+  imageUrlArr: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default ImageCarousel;

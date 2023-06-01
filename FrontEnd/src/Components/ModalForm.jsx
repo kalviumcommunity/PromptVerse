@@ -1,15 +1,34 @@
 import PropTypes from "prop-types";
-import { useState, useCallback } from "react";
+import { useState, useEffect } from "react";
 import {
-  Button,
   Image,
   Stack,
   Box,
   Modal,
   ModalContent,
+  Button,
+  Text,
 } from "@chakra-ui/react";
-import Form1 from "./Description";
-import Form2 from "./Details";
+import { MdAddCircle } from "react-icons/md";
+import DescriptionForm from "./Description";
+import DetailsForm from "./Details";
+
+const images = [
+  {
+    id: 1,
+    firstImage:
+      "https://res.cloudinary.com/dosqxcotq/image/upload/v1683973727/PromptVerse%20Assets/SVGs/undraw_logic_re_nyb4_n75ldh.svg",
+    secondImage:
+      "https://res.cloudinary.com/dosqxcotq/image/upload/v1683973727/PromptVerse%20Assets/SVGs/undraw_my_password_re_ydq7_vmohib.svg",
+  },
+  {
+    id: 2,
+    firstImage:
+      "https://res.cloudinary.com/dosqxcotq/image/upload/v1684463504/PromptVerse%20Assets/SVGs/undraw_sign_in_re_o58h_hzffcf.svg",
+    secondImage:
+      "https://res.cloudinary.com/dosqxcotq/image/upload/v1683973727/PromptVerse%20Assets/SVGs/undraw_joyride_re_968t_lswiv1.svg",
+  },
+];
 
 function ModalForm({ onClose }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,47 +40,77 @@ function ModalForm({ onClose }) {
     originalPrompt: "",
     exampleOutput: "",
   });
+  const [selectedImages, setSelectedImages] = useState(images[0]);
 
-  const handleOpenModal = useCallback(() => {
+  useEffect(() => {
+    if (isOpen) {
+      setSelectedImages(images[0]);
+      setPage(1);
+    }
+  }, [isOpen]);
+
+  const handleOpenModal = () => {
     setIsOpen(true);
-  }, []);
+  };
 
-  const handleCloseModal = useCallback(() => {
+  const handleCloseModal = () => {
     setIsOpen(false);
-  }, []);
+    onClose();
+  };
 
-  const handleInputChange = useCallback((event) => {
+  const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormValues((prevValues) => ({
       ...prevValues,
       [name]: value,
     }));
-  }, []);
+  };
 
-  const handleSubmit = useCallback(
-    (event) => {
-      event.preventDefault();
-      console.log(formValues);
-      handleCloseModal();
-      setPage(1);
-    },
-    [formValues, handleCloseModal]
-  );
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formValues);
+    setFormValues({});
+    handleCloseModal();
+  };
 
-  const handleNextPage = useCallback(() => {
-    setPage((prevPage) => prevPage + 1);
-  }, []);
+  const handleNextPage = () => {
+    setPage(page + 1);
+    setSelectedImages(images[page]);
+  };
 
-  const handlePreviousPage = useCallback(() => {
-    setPage((prevPage) => prevPage - 1);
-  }, []);
+  const handlePreviousPage = () => {
+    setPage(page - 1);
+    setSelectedImages(images[page - 2]);
+  };
 
   return (
-    <>
-      <Button colorScheme="blue" onClick={handleOpenModal}>
-        Open
+    <div>
+      <Button
+        variant="solid"
+        color="white"
+        bg="#6C63FF"
+        padding="10px 16px"
+        marginBottom={{ base: "12px", md: 0 }}
+        marginRight={{ base: 0, md: "28px" }}
+        borderRadius="3px"
+        _hover={{}}
+        _focus={{}}
+        _active={{}}
+        onClick={handleOpenModal}
+      >
+        <Text fontSize="15px" fontWeight="bold" pr="8px">
+          Add Prompt
+        </Text>
+        <MdAddCircle size={24} />
       </Button>
-      <Modal isOpen={isOpen} onClose={handleCloseModal} isCentered size="xl">
+      <Modal
+        isOpen={isOpen}
+        onClose={handleCloseModal}
+        isCentered
+        size="xl"
+        closeOnOverlayClick={false}
+        motionPreset="scale"
+      >
         <ModalContent
           maxWidth="80%"
           h="86vh"
@@ -79,7 +128,7 @@ function ModalForm({ onClose }) {
               alignItems="center"
             >
               <Image
-                src="https://res.cloudinary.com/dosqxcotq/image/upload/v1683973727/PromptVerse%20Assets/SVGs/undraw_logic_re_nyb4_n75ldh.svg"
+                src={selectedImages.firstImage}
                 alt="Logic Image"
                 h="45%"
                 w="90%"
@@ -87,7 +136,7 @@ function ModalForm({ onClose }) {
                 mr="10%"
               />
               <Image
-                src="https://res.cloudinary.com/dosqxcotq/image/upload/v1683973727/PromptVerse%20Assets/SVGs/undraw_my_password_re_ydq7_vmohib.svg"
+                src={selectedImages.secondImage}
                 alt="Password Image"
                 h="45%"
                 w="90%"
@@ -96,7 +145,7 @@ function ModalForm({ onClose }) {
             </Box>
             <Stack w="65%" p={10} spacing={4} bg="#333333" color="white">
               {page === 1 && (
-                <Form1
+                <DescriptionForm
                   formValues={formValues}
                   handleInputChange={handleInputChange}
                   handleCloseModal={handleCloseModal}
@@ -104,19 +153,20 @@ function ModalForm({ onClose }) {
                 />
               )}
               {page === 2 && (
-                <Form2
+                <DetailsForm
                   formValues={formValues}
                   handleInputChange={handleInputChange}
                   previousPage={handlePreviousPage}
                   handleSubmit={handleSubmit}
-                  onClose={onClose}
+                  handleCloseModal={handleCloseModal}
+                  promptType={formValues.promptType}
                 />
               )}
             </Stack>
           </Box>
         </ModalContent>
       </Modal>
-    </>
+    </div>
   );
 }
 
