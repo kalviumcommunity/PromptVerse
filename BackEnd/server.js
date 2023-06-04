@@ -1,39 +1,32 @@
 const express = require("express");
 const cors = require("cors");
-const ChatGpt = require("../FrontEnd/src/Components/CardData/ChatGpt.json");
-const Midjourney = require("../FrontEnd/src/Components/CardData/Midjourney.json");
-const DallE = require("../FrontEnd/src/Components/CardData/DallE.json");
-const StableDiffusion = require("../FrontEnd/src/Components/CardData/StableDiffusion.json");
-const Slides = require("../FrontEnd/src/Components/CardData/Slides.json");
+const ChatGpt = require("./Router/ChatGpt.router");
+const Midjourney = require("./Router/Midjourney.router");
+const DallE = require("./Router/DallE.router");
+const StableDiffusion = require("./Router/StableDiffusion.router");
 
-const ChatGptPath = "../../FrontEnd/src/Components/CardData/ChatGpt.json";
-const MidjourneyPath = "../../FrontEnd/src/Components/CardData/Midjourney.json";
-const DallEPath = "../../FrontEnd/src/Components/CardData/DallE.json";
-const StableDiffusionPath =
-  "../../FrontEnd/src/Components/CardData/StableDiffusion.json";
-const SlidesPath = require("../FrontEnd/src/Components/CardData/Slides.json");
+const connection = require("./Config/db");
 
 const app = express();
-const port = 3000;
+const port = process.env.port;
 app.use(express.json());
 app.use(cors());
 
-app.get("/api/prompts/chatgpt", (req, res) => {
-  res.json(ChatGpt);
+app.get("/", (req, res) => {
+  res.send("Hello World");
 });
 
-app.get("/api/prompts/midjourney", (req, res) => {
-  res.json(Midjourney);
-});
+app.use("/api/chatgpt", ChatGpt);
+app.use("/api/midjourney", Midjourney);
+app.use("/api/dalle", DallE);
+app.use("/api/stablediffusion", StableDiffusion);
 
-app.get("/api/prompts/stablediffusion", (req, res) => {
-  res.json(StableDiffusion);
-});
-
-app.get("/api/prompts/dalle", (req, res) => {
-  res.json(DallE);
-});
-
-app.listen(port, () => {
+app.listen(port, async () => {
+  try {
+    await connection;
+    console.log("Connected to MongoDB");
+  } catch (err) {
+    console.log(err);
+  }
   console.log(`Server is running on port ${port}`);
 });

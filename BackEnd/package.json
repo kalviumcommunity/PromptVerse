@@ -6,13 +6,15 @@
   "repository": "https://github.com/kalviumcommunity/PromptVerse",
   "author": "Rishi Ganesh",
   "license": "MIT",
-  "scripts":{
-    "start":"nodemon server.js"
+  "scripts": {
+    "serve": "nodemon server.js"
   },
   "private": false,
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.1.3",
     "express": "^4.18.2",
+    "mongoose": "^7.2.2",
     "nodemon": "^2.0.22"
   }
 }
