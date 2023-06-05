@@ -1,11 +1,11 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+
 const ChatGpt = require("./Router/ChatGpt.router");
 const Midjourney = require("./Router/Midjourney.router");
 const DallE = require("./Router/DallE.router");
 const StableDiffusion = require("./Router/StableDiffusion.router");
-
 const connection = require("./Config/db");
 
 const app = express();
@@ -24,7 +24,7 @@ app.use("/api/stablediffusion", StableDiffusion);
 
 app.listen(port, async () => {
   try {
-    await connection;
+    await connection();
     console.log("Connected to MongoDB");
   } catch (err) {
     console.log(err);

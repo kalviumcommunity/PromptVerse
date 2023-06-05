@@ -13,13 +13,18 @@ const TextSchema = mongoose.Schema(
   }
 );
 
-const ImageSchema = mongoose.Schema({
-  promptName: { type: String, required: true },
-  promptType: { type: String, required: true },
-  promptDescription: { type: String, required: true },
-  originalPrompt: { type: String, required: true },
-  exampleOutput: { type: [String], required: true },
-});
+const ImageSchema = mongoose.Schema(
+  {
+    promptName: { type: String, required: true },
+    promptType: { type: String, required: true },
+    promptDescription: { type: String, required: true },
+    originalPrompt: { type: String, required: true },
+    exampleOutput: { type: [String], required: true },
+  },
+  {
+    versionKey: false,
+  }
+);
 
 const ChatGptModel = mongoose.model("chatgpt", TextSchema);
 const MidjourneyModel = mongoose.model("midjourney", ImageSchema);
